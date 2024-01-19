@@ -47,10 +47,9 @@ class News extends Model
     private function removeImage()
     {
         $image = str_replace('/storage', '/public', $this->image);
-        $pathInfo = pathinfo($image);
-        $directoryPath = rtrim($pathInfo['dirname'], '/');
-
         if ($this->image && Storage::exists($image)) {
+            $pathInfo = pathinfo($image);
+            $directoryPath = rtrim($pathInfo['dirname'], '/');
             Storage::deleteDirectory($directoryPath);
         }
     }

@@ -23,7 +23,7 @@
             <form action="{{ route('news.store') }}" method="POST" enctype="multipart/form-data">
                 @csrf
                 <div class="p-4 md:p-5 space-y-4">
-                    <div class="grid gap-4 sm:grid-cols-2 sm:gap-6">
+                    <div class="grid md:gap-4 grid-cols-1 gap-6">
 
                         <!-- Modal description -->
                         <div class="sm:col-span-2">
@@ -126,7 +126,7 @@
                 @csrf
                 @method('PUT')
                 <div class="p-4 md:p-5 space-y-4">
-                    <div class="grid gap-4 sm:grid-cols-2 sm:gap-6">
+                    <div class="grid md:gap-4 grid-cols-1 gap-6">
 
                         <!-- Modal description -->
                         <div class="sm:col-span-2">
