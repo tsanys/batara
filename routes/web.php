@@ -34,6 +34,7 @@ Route::get('/register/member/{id}', [MemberController::class, 'memberType'])->na
 //auth
 Route::get('/login', [AuthController::class, 'login'])->middleware('guest')->name('login');
 Route::post('/login', [AuthController::class, 'authenticate'])->name('authenticate');
+Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 
 //dashboard
 Route::group(['prefix' => 'dashboard', 'middleware' => 'auth'], function () {
