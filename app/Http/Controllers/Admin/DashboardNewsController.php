@@ -74,7 +74,7 @@ class DashboardNewsController extends Controller
 
         $news->update($data);
 
-        return redirect()->back()->with('success', 'Berhasil Mengubah Berita!');
+        return redirect()->back()->with('success', 'Berhasil mengubah Berita!');
     }
 
     public function destroy(News $news)
@@ -105,6 +105,8 @@ class DashboardNewsController extends Controller
 
             return Storage::url($path);
         }
+
+        return $existingImage;
     }
 
     private function uploadNewsImage($document, $filename, $data)
@@ -121,7 +123,9 @@ class DashboardNewsController extends Controller
         $image = str_replace('/storage', '/public', $existingImagePath);
 
         if ($existingImagePath && Storage::exists($image)) {
-            Storage::delete($image);
+            $pathInfo = pathinfo($image);
+            $directoryPath = rtrim($pathInfo['dirname'], '/');
+            Storage::deleteDirectory($directoryPath);
         }
     }
 }

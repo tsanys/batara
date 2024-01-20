@@ -212,14 +212,35 @@
 <script src="https://cdn.ckeditor.com/ckeditor5/40.2.0/classic/ckeditor.js"></script>
 
 <script>
-    ClassicEditor
-        .create(document.querySelector('#content'))
-        .catch(error => {
-            console.error(error);
-        });
+    document.addEventListener('DOMContentLoaded', function() {
+        ClassicEditor
+            .create(document.querySelector('#content'), {
+                toolbar: {
+                    items: [
+                        'undo', 'redo',
+                        '|', 'fontfamily', 'fontsize', 'fontColor', 'fontBackgroundColor',
+                        '|', 'bold', 'italic', 'strikethrough', 'subscript', 'superscript',
+                        '|', 'link',
+                    ],
+                }
+            })
+            .catch(error => {
+                console.error(error);
+            });
+
+    });
 
     const editor = ClassicEditor.create(document.querySelector(
-            '#contentUpdate'))
+            '#contentUpdate'), {
+            toolbar: {
+                items: [
+                    'undo', 'redo',
+                    '|', 'fontfamily', 'fontsize', 'fontColor', 'fontBackgroundColor',
+                    '|', 'bold', 'italic', 'strikethrough', 'subscript', 'superscript',
+                    '|', 'link',
+                ],
+            }
+        })
         .catch(error => {
             console.error(error);
         });
@@ -299,7 +320,6 @@
                         return response.json();
                     })
                     .then(data => {
-                        console.log(data);
                         headline.innerText = data.news.title
                         titleUpdate.value = data.news.title
                         slugUpdate.value = generateSlug(data.news.slug)
@@ -325,7 +345,7 @@
         this.setAttribute('disabled', '')
         this.removeAttribute('class')
         this.setAttribute('class',
-            'inline-flex items-center px-5 py-2.5 sm:mt-6 text-sm font-medium text-center text-white bg-green-500 rounded-lg cursor-not-allowed'
+            'inline-flex items-center px-5 py-2.5 text-sm font-medium text-center text-white bg-green-500 rounded-lg cursor-not-allowed'
         )
 
         document.querySelector('#formCreate').submit()
@@ -336,7 +356,7 @@
         this.setAttribute('disabled', '')
         this.removeAttribute('class')
         this.setAttribute('class',
-            'inline-flex items-center px-5 py-2.5 sm:mt-6 text-sm font-medium text-center text-white bg-green-500 rounded-lg cursor-not-allowed'
+            'inline-flex items-center px-5 py-2.5 text-sm font-medium text-center text-white bg-green-500 rounded-lg cursor-not-allowed'
         )
 
         document.querySelector('#formUpdate').submit()

@@ -106,11 +106,18 @@
                             </svg>
                             MISI
                         </h3>
-                        <p class="text-gray-500 dark:text-gray-400">
-                            Membangun ekosistem industri berkelanjutan, meningkatkan daya saing sebagai mitra strategis, dan
-                            mengelola koperasi serta unit usaha secara profesional dengan prinsip good cooperative
-                            governance untuk produktivitas dan kepercayaan anggota
-                        </p>
+                        <ul class="max-w-md space-y-1 text-gray-500 list-disc list-inside dark:text-gray-400">
+                            <li>
+                                Membangun ekosistem industri berkelanjutan bagi produktifitas anggota
+                            </li>
+                            <li>
+                                Memiliki daya saing sebagai mitra strategis dan terpercaya bagi anggota
+                            </li>
+                            <li>
+                                Mengelola koperasi dan unit usaha secara professional dengan
+                                prinsif good cooperative governance
+                            </li>
+                        </ul>
                     </div>
                 </div>
                 <div>
@@ -356,11 +363,6 @@
                                 </p>
                             </div>
                             <div class="flex gap-2 my-4">
-                                <p
-                                    class="prose text-sm italic truncate prose-gray prose-sm text-gray-600 dark:text-gray-400 dark:prose-dark">
-                                    {{ $item->author->fullname }}
-                                    -
-                                </p>
                                 <p
                                     class="prose text-sm italic truncate prose-gray prose-sm text-gray-600 dark:text-gray-400 dark:prose-dark">
                                     {{ \Carbon\Carbon::parse($item->created_at)->format('d/m/Y') }}
