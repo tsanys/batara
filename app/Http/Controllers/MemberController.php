@@ -136,7 +136,7 @@ class MemberController extends Controller
     private function uploadMemberDocument($document, $filename, $data)
     {
         return Storage::putFileAs(
-            '/public/upload/members/member-' . $data['token'] . '/documents',
+            '/public/upload/members/member-' . $data['remember_token'] . '/documents',
             $document,
             $filename
         );
