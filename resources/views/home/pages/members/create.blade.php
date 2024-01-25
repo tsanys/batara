@@ -18,7 +18,7 @@
                         <label for="nik" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
                             NIK
                         </label>
-                        <input type="text" name="nik" id="nik"
+                        <input type="text" name="nik" id="nik" value="{{ old('nik') }}"
                             class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
                             placeholder="Masukkan NIK" required="true">
                     </div>
@@ -26,7 +26,7 @@
                         <label for="fullname" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
                             Nama Lengkap
                         </label>
-                        <input type="text" name="fullname" id="fullname"
+                        <input type="text" name="fullname" id="fullname" value="{{ old('fullname') }}"
                             class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
                             placeholder="Masukkan Nama Lengkap" required="true">
                     </div>
@@ -34,7 +34,7 @@
                         <label for="nickname" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
                             Nama Panggilan
                         </label>
-                        <input type="text" name="nickname" id="nickname"
+                        <input type="text" name="nickname" id="nickname" value="{{ old('nickname') }}"
                             class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
                             placeholder="Masukkan Nama Panggilan" required="true">
                     </div>
@@ -42,7 +42,7 @@
                         <label for="phone" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
                             No. Telepon/HP
                         </label>
-                        <input type="text" name="phone" id="phone"
+                        <input type="text" name="phone" id="phone" value="{{ old('phone') }}"
                             class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
                             placeholder="Masukkan No. Telepon/HP" required="true">
                     </div>
@@ -50,7 +50,7 @@
                         <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
                             Email
                         </label>
-                        <input type="email" name="email" id="email"
+                        <input type="email" name="email" id="email" value="{{ old('email') }}"
                             class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
                             placeholder="Masukkan Email" required="true">
                     </div>
@@ -83,7 +83,7 @@
                         <label for="place_of_birth" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
                             Tempat Lahir
                         </label>
-                        <input type="text" name="place_of_birth" id="place_of_birth"
+                        <input type="text" name="place_of_birth" id="place_of_birth" value="{{ old('place_of_birth') }}"
                             class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
                             placeholder="Masukkan Nama Lengkap" required="true">
                     </div>
@@ -91,7 +91,7 @@
                         <label for="date_of_birth" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
                             Tanggal Lahir
                         </label>
-                        <input type="date" name="date_of_birth" id="date_of_birth"
+                        <input type="date" name="date_of_birth" id="date_of_birth" value="{{ old('date_of_birth') }}"
                             class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
                             placeholder="Masukkan Nama Lengkap" required="true">
                     </div>
@@ -114,7 +114,7 @@
                         <label for="competence" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
                             Kompetensi
                         </label>
-                        <input type="text" name="competence" id="competence"
+                        <input type="text" name="competence" id="competence" value="{{ old('competence') }}"
                             class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
                             placeholder="Masukkan Kompetensi" required="true">
                     </div>
@@ -146,13 +146,13 @@
                         </label>
                         <textarea id="ktp_address" rows="8" name="ktp_address"
                             class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
-                            placeholder="Ketikkan Alamat Sesuai KTP"></textarea>
+                            placeholder="Ketikkan Alamat Sesuai KTP">{{ old('ktp_address') }}</textarea>
                     </div>
                     <div class="sm:col-span-2">
                         <label for="ktp_regency" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
                             Kabupaten Sesuai KTP
                         </label>
-                        <input type="text" name="ktp_regency" id="ktp_regency"
+                        <input type="text" name="ktp_regency" id="ktp_regency" value="{{ old('ktp_regency') }}"
                             class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
                             placeholder="Masukkan Kabupaten Sesuai KTP" required="true">
                     </div>
@@ -160,7 +160,7 @@
                         <label for="ktp_distric" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
                             Kecamatan Seusai KTP
                         </label>
-                        <input type="text" name="ktp_distric" id="ktp_distric"
+                        <input type="text" name="ktp_distric" id="ktp_distric" value="{{ old('ktp_distric') }}"
                             class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
                             placeholder="Masukkan Kecamatan Seusai KTP" required="true">
                     </div>
@@ -169,6 +169,7 @@
                             kelurahan Seusai KTP
                         </label>
                         <input type="text" name="ktp_subdistric" id="ktp_subdistric"
+                            value="{{ old('ktp_subdistric') }}"
                             class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
                             placeholder="Masukkan kelurahan Seusai KTP" required="true">
                     </div>
@@ -190,13 +191,14 @@
                         </label>
                         <textarea id="current_address" rows="8" name="current_address"
                             class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
-                            placeholder="Ketikkan Alamat Saat Ini"></textarea>
+                            placeholder="Ketikkan Alamat Saat Ini">{{ old('current_address') }}</textarea>
                     </div>
                     <div class="sm:col-span-2">
                         <label for="current_regency" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
                             Kabupaten Saat Ini
                         </label>
                         <input type="text" name="current_regency" id="current_regency"
+                            value="{{ old('current_regency') }}"
                             class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
                             placeholder="Masukkan Kabupaten Saat Ini" required="true">
                     </div>
@@ -205,6 +207,7 @@
                             Kecamatan Saat Ini
                         </label>
                         <input type="text" name="current_distric" id="current_distric"
+                            value="{{ old('current_distric') }}"
                             class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
                             placeholder="Masukkan Kecamatan Saat Ini" required="true">
                     </div>
@@ -214,6 +217,7 @@
                             kelurahan Saat Ini
                         </label>
                         <input type="text" name="current_subdistric" id="current_subdistric"
+                            value="{{ old('current_subdistric') }}"
                             class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
                             placeholder="Masukkan kelurahan Saat Ini" required="true">
                     </div>

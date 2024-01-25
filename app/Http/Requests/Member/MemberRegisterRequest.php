@@ -26,7 +26,7 @@ class MemberRegisterRequest extends FormRequest
             'fullname' => 'required',
             'nickname' => 'required',
             'phone' => 'required',
-            'email' => 'required',
+            'email' => 'required|unique:users,email',
             'gender' => 'required',
             'religion' => 'required',
             'place_of_birth' => 'required',
@@ -63,6 +63,7 @@ class MemberRegisterRequest extends FormRequest
             'administrative_cost.required' => 'Biaya Administrasi Pendaftaran Wajib dicentang',
             'principal_saving.required' => 'Simpanan Pokok Pendaftaran Wajib dicentang',
             'mandatory_saving.required' => 'Simpanan Wajib Pendaftaran Wajib dicentang',
+            'email.unique' => 'Email ini sudah didaftarkan'
         ];
     }
 }
